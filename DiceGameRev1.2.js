@@ -48,8 +48,40 @@ function determineWinner(player1Score, player2Score) {
 	}
 }
 
+//ver 1.3
+	
+function walletMonitor(){
+		var walletStart = $13.00;
+		var walletMax = $52.00; 
+		//while (walletStart = 0>= walletMax, walletTotal = < walletMax){
+		while (player1Wallet !== walletMax && player2Wallet !== walletMax) {
+			//play();
+		alert("Insufficent funds for Player " has caused the game to stop, play again!");
+}
+
+//function playerWalletBalance(){
+	//var walletTotal = $13;
+	//var Win = $13.00;
+	//var Lose = $6.50;
+	//var Tieyay = autoWin;
+	//var Tieno = $13.00
+	//var Pass = $3.25; 
+	//if win = (walletTotal + Win);
+	//else if lose = (walletTotal - Lose);
+	//else if Tie
+		//if correct = tieCorrectChoice();
+		//else if incorrect = (walletTotal - Tieno);
+	//else if pass = (walletTotal - Pass);
+	//else please select from the options above.
+//} 
+	
+
+//function tieCorrectChoice ()}
+//Tieyay = autoWin alert("Player " was correct to select TIE, play again!");
+//}
+
 function runStartGame(){
-	var playerBet = getPlayerBet();
+	var userBetSelection = getUserBet();
 	var player1Score = determineScore();
 	var player2Score = determineScore();
 	alert ("Player 1 Rolled " +player1Score+ " Player 2 Rolled " +player2Score);
@@ -60,50 +92,3 @@ function runStartGame(){
 //console.log(testWinner);
 
 runStartGame();
-
-
-//ver 1.2
-
-
-
-//function playerDollarTracker(){
-	//var baseDollars = $13;
-	//var playerWinsDollars = $13;
-	//var playerLoseDollars = $9;
-	//var playerTie = autoWin;
-	//var playerSkipDollars = $3; 
-	//do baseDollars
-	//while baseDollars =<52
-	//if
-	
-	
-	
-//function pointVariance(player1Points, player2Points){
-	//var player1Points = playerPointTracker(player1Points);
-	//var player2Points = playerPointTracker(player2Points);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

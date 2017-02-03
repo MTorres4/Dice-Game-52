@@ -1,0 +1,21 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+h1 {
+	font-family: 'Lobster', cursive;
+	font-size: 45px;
+}
+.foot {
+	font-weight: bold;
+	background-color: #b9d9f9;
+}
+p {
+	font-family: 'Lobster', cursive;
+	font-size: 30px;
+}
+h3 {
+	font-family: 'Lobster', cursive;
+	font-size: 35px;
+}
