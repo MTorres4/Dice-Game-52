@@ -1,12 +1,4 @@
 "use strict";
-function displayGreeting(){
-	alert("Welcome to 'Get to 52!!' \n The rules are simple, \n Using 6 differently sided die, get as close to 52 as possible \n The player closest to 52 wins!");
-//More complicated than just highest number wins
-	//player1 name
-	//player2 name or AI
-	//update- prompt("Who do you think is going to win this round? If you are right, you will add 2 points, if not, lose 5 points, or you can pass on betting");
-}
-
 function rollDie(numberofSides){
 	return Math.floor((Math.random()*numberofSides) + 1);
 }
@@ -45,7 +37,8 @@ function determineWinner(player1Score, player2Score) {
 }
 
 function runStartGame(){
-	displayGreeting();
+	//displayGreeting();
+	getPlayerBet();
 	var player1Score = determineScore();
 	var player2Score = determineScore();
 	alert ("Player 1 Rolled " +player1Score+ " Player 2 Rolled " +player2Score);
@@ -56,3 +49,50 @@ function runStartGame(){
 //console.log(testWinner);
 
 runStartGame();
+
+
+//ver 1.2
+
+function getPlayerBet(){
+	var betOptions = ["Win ", "Lose ", "TIE ", "Skip Bet "];
+	var betSelection = prompt("Do you think you will: "+betOptions+" \n Correct: add $13.00 \n Incorrect: deduct $6.50 \n TIE: Correct- automatically win! Incorrect- deduct $13.00 \n Skip Bet: deduct $3.25");
+	return betSelection;
+}
+
+//function playerDollarTracker(){
+	//var baseDollars = $13;
+	//var playerWinsDollars = $13;
+	//var playerLoseDollars = $9;
+	//var playerTie = autoWin;
+	//var playerSkipDollars = $3; 
+	//do baseDollars
+	//while baseDollars =<52
+	
+//function pointVariance(player1Points, player2Points){
+	//var player1Points = playerPointTracker(player1Points);
+	//var player2Points = playerPointTracker(player2Points);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

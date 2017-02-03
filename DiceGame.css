@@ -12,5 +12,10 @@ h1 {
 	background-color: #b9d9f9;
 }
 p {
-	padding: 20;
+	font-family: 'Lobster', cursive;
+	font-size: 30px;
+}
+h3 {
+	font-family: 'Lobster', cursive;
+	font-size: 35px;
 }

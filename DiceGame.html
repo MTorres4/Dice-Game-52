@@ -14,13 +14,30 @@
 		<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
 	</Head>
 	<Body>
+	<center>
 		<h1> Welcome to get to '52'! </h1>
-		<script src='DiceGame.js'></script>		
+		<h3> Read the rules, then click the button to start the game!</h3> 
+		<br>
+		<h3> The rules:</h3>
+		<p> A. 6 different sided die are rolled and the player closest to 52 wins the round; </p>
+		<p> B. Each round, you will decide if you believe you will win, lose, *TIE, or not bet on that round; </p>
+		<p> C. If you guess correctly, $13.00 will be added to your score, if you guess incorrectly, $6.50 will be deducted; </p>
+		<p> C1. If you guess correctly that the round was a *TIE, you automatically win the game, but if you are wrong, $13.00 will be deducted; </p>
+		<p> C2. If you choose not to place a bet, $3.25 will be deducted;</p>
+		<p> D. You and the computer have started with $13.00;  </p>
+        <p> E. The first player to $52.00 is the winner of the game!! </p> 
+		<br>
+		<!-- TODO add bet key table -->
+		<!-- TODO add two running score tables starting at 13 and add when bets are right, wrong, or a tie and ends the game -->
+		<button onclick="runStartGame()">Click Here!</button>
 		<br>
 		<br>
+		<script src='DiceGame.js'></script>	
+		<br>
+	</center>
 		<footer class= "foot">
-			<p>Created by: Marissa Torres</p>
-			<p> Ver 1.1</p>
+			<h5>Created by: Marissa Torres</h5>
+			<h5> Ver 1.2</h5>
 		</footer>
 		
 	</Body>
