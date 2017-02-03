@@ -1,4 +1,16 @@
 "use strict";
+function getUserBet(){
+	var betOptions = ["Win ", "Lose ", "TIE ", "Skip Bet "];
+	var userBetSelection = prompt("Do you think you will: "+betOptions+" \n Correct: add $13.00 \n Incorrect: deduct $6.50 \n TIE: Correct- automatically win! Incorrect- deduct $13.00 \n Skip Bet: deduct $3.25");
+	return userBetSelection;
+}
+
+function getRandomBet (betOptions){
+	var betOptions = ["Win ", "Lose ", "TIE ", "Skip Bet "];
+	var computerBetSelection = Math.floor((Math.random()* betOptions.length >> 0));
+	return computerBetSelection;
+}
+
 function rollDie(numberofSides){
 	return Math.floor((Math.random()*numberofSides) + 1);
 }
@@ -37,8 +49,7 @@ function determineWinner(player1Score, player2Score) {
 }
 
 function runStartGame(){
-	//displayGreeting();
-	getPlayerBet();
+	var playerBet = getPlayerBet();
 	var player1Score = determineScore();
 	var player2Score = determineScore();
 	alert ("Player 1 Rolled " +player1Score+ " Player 2 Rolled " +player2Score);
@@ -53,11 +64,7 @@ runStartGame();
 
 //ver 1.2
 
-function getPlayerBet(){
-	var betOptions = ["Win ", "Lose ", "TIE ", "Skip Bet "];
-	var betSelection = prompt("Do you think you will: "+betOptions+" \n Correct: add $13.00 \n Incorrect: deduct $6.50 \n TIE: Correct- automatically win! Incorrect- deduct $13.00 \n Skip Bet: deduct $3.25");
-	return betSelection;
-}
+
 
 //function playerDollarTracker(){
 	//var baseDollars = $13;
@@ -67,10 +74,14 @@ function getPlayerBet(){
 	//var playerSkipDollars = $3; 
 	//do baseDollars
 	//while baseDollars =<52
+	//if
+	
+	
 	
 //function pointVariance(player1Points, player2Points){
 	//var player1Points = playerPointTracker(player1Points);
 	//var player2Points = playerPointTracker(player2Points);
+
 
 
 
