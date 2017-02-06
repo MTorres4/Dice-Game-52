@@ -29,34 +29,36 @@ function closestTo52(playerScore) {
 	return difference;
 }
 
-function determineWinner(player1Score, player2Score) {
-	var player1Score = closestTo52(player1Score);
-	var player2Score = closestTo52(player2Score);
+function determineWinner(playerOneScore, playerTwoScore) {
+	var player1Score = closestTo52(playerOneScore);
+	var player2Score = closestTo52(playerTwoScore);
 //Create a dice game for a single player against one or multiple AI
 	if (player1Score === player2Score){
-		alert("It's a tie!");
+		alert("Outcome- It's a tie!");
+		return 2;
 	}else if(player1Score > player2Score){
-		alert("Player 2 Wins!");
+		alert("Outcome- Player 2 Wins!");
+		return 1;
 	}else if(player1Score < player2Score){
-		alert("Player 1 Wins!");
+		alert("Outcome- Player 1 Wins!");
+		return 0;
 	}
 }
 
 //ver 1.2
-function compareGuess (userGuessSelection){
-	var player1Guess = getUserGuess(userGuessSelection);
-	var player1Score = determineWinner(player1Score);
-	var player2Score = determineWinner(player2Score);
+function compareGuess (userGuessSelection, roundOutcome){
 	var guessOptions = ["Win ", "Lose ",  "Tie "];
 	var win = 0;
 	var lose = 1;
 	var tie = 2;
-	if (userGuessSelection === 0 && userGuessSelection === determineWinner(player1Score, player2Score)){
+	if (userGuessSelection.toLowerCase() === "win" && userGuessSelection === roundOutcome){
 		alert("You were right!");
-	}else if(userGuessSelection === 1 && userGuessSelection === determineWinner(player1Score, player2Score)){
+	}else if(userGuessSelection.toLowerCase() === "lose" && userGuessSelection === roundOutcome){
 		alert("You were right!");
-	}else if(userGuessSelection === 2 && userGuessSelection === determineWinner(player1Score, player2Score)){
+	}else if(userGuessSelection.toLowerCase() === "tie" && userGuessSelection === roundOutcome){
 		alert("You were right!");
+	}else {(userGuessSelection !== roundOutcome)
+		alert("Please try again!");
 	}
 }
 
@@ -65,6 +67,7 @@ function runStartGame(){
 	var player1Score = determineScore();
 	var player2Score = determineScore();
 	alert ("Player 1 Rolled " +player1Score+ " Player 2 Rolled " +player2Score);
-	determineWinner(player1Score, player2Score);
+	var roundOutcome = determineWinner(player1Score, player2Score);
+	var userGuess = compareGuess(userGuessSelection, roundOutcome);
 }
 
